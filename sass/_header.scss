@@ -1,0 +1,77 @@
+.header{
+    background-image: linear-gradient(rgba($color-secondary,.9),rgba($color-secondary,.9)), url(/img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-column: full-start / col-end 6;
+    display: grid;
+    grid-template-rows: 1fr min-content minmax(6rem,min-content) 1fr;
+    grid-template-columns: minmax(min-content,max-content);
+    grid-row-gap: 3rem;
+    justify-content: center;
+    padding: 8rem;
+    padding-top: 4rem;
+  
+    @media only screen and (max-width:$bp-small){
+        grid-column: 1 / -1;
+    }
+
+    &__logo{
+        height:3rem;
+         justify-self: center;
+    }
+    &-h3{
+        // align-self: end;
+        // justify-self: start;
+        //  grid-column: 1 / 2;
+        // justify-self: start;
+    }
+    &__btn{
+        justify-self: start;
+        align-self: start;
+    }
+
+    
+
+    .seenon__text{
+        display:grid;
+        grid-template-columns:1fr max-content 1fr;
+        grid-column-gap: 1.5rem;
+        //justify-self: center;
+        font-size: 1.6rem;
+        color: $color-grey-light-2;
+        &::before,
+        &::after{
+            content: "";
+            height: 1px;
+            //width: 40rem;
+            background-color: currentColor;
+            display: block;
+            align-self: center;
+            //align-self: center;
+        }
+    }
+    // .seenon__text::before,
+    // .seenon__text::after{
+    //     content: "";
+    //     display: block;
+    //     height: 1px;
+    //     background:currentColor;
+
+    // }
+    .seenon__logo{
+        display: grid;
+        grid-template-columns: repeat(4,minmax(min-content,1fr));
+        grid-column-gap: 2rem;
+        justify-items: center;
+        align-items: center;
+        img{
+            //width: 2.5rem;
+            max-height: 2.5rem;
+            max-width: 100%;
+            filter: brightness(70%);
+
+            
+        }
+
+    }
+}
